@@ -18,6 +18,7 @@ export default function Footer() {
             <a href="#" className="hover:text-[#F5F5F7]/70 transition-colors">Privacy</a>
             <a href="#" className="hover:text-[#F5F5F7]/70 transition-colors">Terms</a>
             <a href="#" className="hover:text-[#F5F5F7]/70 transition-colors">Contact</a>
+            <a href="mailto:privacy@amakaflow.com?subject=Data+Deletion+Request" className="hover:text-[#A29BFE] transition-colors">Request data deletion</a>
           </div>
 
           {/* Social icons */}
@@ -45,8 +46,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-white/5 text-center text-xs text-[#F5F5F7]/20">
-          &copy; {new Date().getFullYear()} AmakaFlow. All rights reserved.
+        <div className="mt-8 pt-8 border-t border-white/5 flex flex-col items-center gap-3">
+          <p className="text-xs text-[#F5F5F7]/25 text-center">
+            GDPR-aware practices&nbsp;&bull;&nbsp;Encrypted in transit&nbsp;&bull;&nbsp;We do not sell your data
+          </p>
+          <p className="text-xs text-[#F5F5F7]/20">
+            &copy; {new Date().getFullYear()} AmakaFlow. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
