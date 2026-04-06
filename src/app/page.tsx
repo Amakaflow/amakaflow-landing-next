@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import TrustSignals from "@/components/TrustSignals";
-import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
-import SampleOutput from "@/components/SampleOutput";
-import Platforms from "@/components/Platforms";
+import DayTimeline from "@/components/DayTimeline";
+import BeforeAfter from "@/components/BeforeAfter";
+import MultiChannel from "@/components/MultiChannel";
+import CoachChat from "@/components/CoachChat";
+import DeviceGrid from "@/components/DeviceGrid";
 import Pricing from "@/components/Pricing";
-import Waitlist from "@/components/Waitlist";
+import EmailCapture from "@/components/EmailCapture";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -15,13 +15,20 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <TrustSignals />
-        <Features />
-        <HowItWorks />
-        <SampleOutput />
-        <Platforms />
+        <DayTimeline />
+        <BeforeAfter />
+        <MultiChannel />
+        <CoachChat />
+        <DeviceGrid />
         <Pricing />
-        <Waitlist />
+        <section className="py-24 sm:py-32">
+          <div className="max-w-md mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold mb-6">
+              Ready to simplify your training?
+            </h2>
+            <EmailCapture />
+          </div>
+        </section>
       </main>
       <Footer />
     </>
