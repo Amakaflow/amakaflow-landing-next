@@ -6,24 +6,24 @@ const buckets = [
   {
     title: "Push to Devices",
     items: [
-      { name: "Garmin", status: "✅" },
-      { name: "Apple Watch", status: "✅" },
-      { name: "Amazfit", status: "✅" },
+      { name: "Garmin", live: true },
+      { name: "Apple Watch", live: true },
+      { name: "Amazfit", live: true },
     ],
   },
   {
     title: "Import from Content",
     items: [
-      { name: "YouTube", status: null },
-      { name: "Instagram", status: null },
-      { name: "TikTok", status: null },
+      { name: "YouTube", live: false },
+      { name: "Instagram", live: false },
+      { name: "TikTok", live: false },
     ],
   },
   {
     title: "Sync with Platforms",
     items: [
-      { name: "Strava", status: null },
-      { name: "Runna", status: null },
+      { name: "Strava", live: false },
+      { name: "Runna", live: false },
     ],
   },
 ];
@@ -67,9 +67,18 @@ export default function DeviceGrid() {
                     className="flex items-center justify-between text-sm"
                   >
                     <span className="text-[#F5F5F7]/60">{item.name}</span>
-                    {item.status && (
-                      <span className="text-base">{item.status}</span>
-                    )}
+                    <span
+                      className="flex items-center gap-1.5"
+                      aria-label={item.live ? `${item.name}: live` : `${item.name}: coming soon`}
+                    >
+                      <span
+                        className={`inline-block w-2 h-2 rounded-full ${item.live ? "bg-emerald-400" : "bg-white/20"}`}
+                        aria-hidden="true"
+                      />
+                      <span className={`text-[10px] font-medium ${item.live ? "text-emerald-400" : "text-[#F5F5F7]/30"}`}>
+                        {item.live ? "Live" : "Soon"}
+                      </span>
+                    </span>
                   </li>
                 ))}
               </ul>

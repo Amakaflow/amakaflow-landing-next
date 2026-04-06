@@ -2,14 +2,28 @@
 
 import { motion } from "framer-motion";
 
-const messages = [
+type PlanDay = { day: string; session: string };
+
+type UserMessage = {
+  role: "user";
+  text: string;
+};
+
+type AiMessage = {
+  role: "ai";
+  plan: PlanDay[];
+  warning?: string;
+};
+
+type Message = UserMessage | AiMessage;
+
+const messages: Message[] = [
   {
-    role: "user" as const,
+    role: "user",
     text: "Plan my week — Hyrox, keep 3 runs",
   },
   {
-    role: "ai" as const,
-    text: null,
+    role: "ai",
     plan: [
       { day: "Mon", session: "5K Easy Run" },
       { day: "Tue", session: "Hyrox Prep" },
@@ -21,12 +35,11 @@ const messages = [
     ],
   },
   {
-    role: "user" as const,
+    role: "user",
     text: "Move Hyrox to Thursday",
   },
   {
-    role: "ai" as const,
-    text: null,
+    role: "ai",
     plan: [
       { day: "Mon", session: "5K Easy Run" },
       { day: "Tue", session: "Tempo Run" },
@@ -75,18 +88,20 @@ export default function CoachChat() {
                 </div>
               ) : (
                 <div className="bg-white/[0.04] rounded-xl rounded-tl-sm px-4 py-3 max-w-[90%] space-y-2.5">
-                  {/* Plan grid */}
-                  <div className="grid grid-cols-7 gap-1">
-                    {msg.plan!.map((d) => (
-                      <div key={d.day} className="text-center">
-                        <div className="text-[10px] text-[#F5F5F7]/30 mb-1">
-                          {d.day}
+                  {/* Plan grid — horizontal scroll on mobile, grid on sm+ */}
+                  <div className="overflow-x-auto -mx-1 px-1">
+                    <div className="grid grid-cols-7 gap-1 min-w-[280px]">
+                      {msg.plan.map((d) => (
+                        <div key={d.day} className="text-center">
+                          <div className="text-[10px] text-[#F5F5F7]/30 mb-1">
+                            {d.day}
+                          </div>
+                          <div className="text-[10px] text-[#F5F5F7]/60 leading-tight">
+                            {d.session}
+                          </div>
                         </div>
-                        <div className="text-[10px] text-[#F5F5F7]/60 leading-tight">
-                          {d.session}
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
 
                   {/* Warning */}

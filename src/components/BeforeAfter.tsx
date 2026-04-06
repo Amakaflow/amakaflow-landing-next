@@ -49,7 +49,7 @@ export default function BeforeAfter() {
         </motion.div>
 
         {/* Column headers */}
-        <div className="grid grid-cols-2 gap-4 mb-6 px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 px-4">
           <div className="text-sm font-semibold text-red-400/80 uppercase tracking-wider">
             Before
           </div>
@@ -67,7 +67,7 @@ export default function BeforeAfter() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               <div className="flex items-start gap-2.5 rounded-xl bg-red-500/[0.06] border border-red-500/10 px-4 py-3">
                 <span className="text-red-400 mt-0.5 shrink-0">❌</span>
