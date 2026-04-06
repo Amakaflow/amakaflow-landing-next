@@ -13,14 +13,14 @@ const comparison = [
   },
   {
     before: "Type everything into Garmin Connect",
-    after: "One tap \u2192 on your Garmin",
+    after: "One tap → on your Garmin",
   },
   {
     before: "Hope you remember the plan",
     after: "AI plans your week and sends reminders",
   },
   {
-    before: "Miss a session \u2192 rework the week manually",
+    before: "Miss a session → rework the week manually",
     after: "AI rebalances, you approve",
   },
   {
@@ -70,11 +70,11 @@ export default function BeforeAfter() {
               className="grid grid-cols-2 gap-4"
             >
               <div className="flex items-start gap-2.5 rounded-xl bg-red-500/[0.06] border border-red-500/10 px-4 py-3">
-                <span className="text-red-400 mt-0.5 shrink-0">\u274C</span>
+                <span className="text-red-400 mt-0.5 shrink-0">❌</span>
                 <span className="text-sm text-[#F5F5F7]/60">{row.before}</span>
               </div>
               <div className="flex items-start gap-2.5 rounded-xl bg-emerald-500/[0.06] border border-emerald-500/10 px-4 py-3">
-                <span className="text-emerald-400 mt-0.5 shrink-0">\u2705</span>
+                <span className="text-emerald-400 mt-0.5 shrink-0">✅</span>
                 <span className="text-sm text-[#F5F5F7]/70">{row.after}</span>
               </div>
             </motion.div>
@@ -93,7 +93,7 @@ export default function BeforeAfter() {
             <span className="text-red-400 font-mono text-lg font-bold">
               20 min
             </span>
-            <span className="text-[#F5F5F7]/30">\u2192</span>
+            <span className="text-[#F5F5F7]/30">→</span>
             <span className="text-emerald-400 font-mono text-lg font-bold">
               30 sec
             </span>

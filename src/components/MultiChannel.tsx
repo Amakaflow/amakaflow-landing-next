@@ -9,7 +9,7 @@ const channels = [
     content: (
       <div className="space-y-2">
         <div className="text-xs font-semibold text-[#F5F5F7]/70 mb-3">Training Week</div>
-        {["Mon \u2014 Upper Body", "Tue \u2014 5K Run", "Wed \u2014 Rest", "Thu \u2014 Hyrox Prep"].map(
+        {["Mon — Upper Body", "Tue — 5K Run", "Wed — Rest", "Thu — Hyrox Prep"].map(
           (day) => (
             <div
               key={day}
@@ -47,7 +47,7 @@ const channels = [
   },
   {
     name: "Watch",
-    icon: "\u231A",
+    icon: "⌚",
     content: (
       <div className="flex flex-col items-center text-center gap-2 py-2">
         <div className="text-[10px] text-[#F5F5F7]/30 uppercase tracking-wider">

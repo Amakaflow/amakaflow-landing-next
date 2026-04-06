@@ -6,9 +6,9 @@ const buckets = [
   {
     title: "Push to Devices",
     items: [
-      { name: "Garmin", status: "\u2705" },
-      { name: "Apple Watch", status: "\u2705" },
-      { name: "Amazfit", status: "\u2705" },
+      { name: "Garmin", status: "✅" },
+      { name: "Apple Watch", status: "✅" },
+      { name: "Amazfit", status: "✅" },
     ],
   },
   {

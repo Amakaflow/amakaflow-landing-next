@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const messages = [
   {
     role: "user" as const,
-    text: "Plan my week \u2014 Hyrox, keep 3 runs",
+    text: "Plan my week — Hyrox, keep 3 runs",
   },
   {
     role: "ai" as const,
@@ -36,7 +36,7 @@ const messages = [
       { day: "Sat", session: "Hyrox Simulation" },
       { day: "Sun", session: "Rest" },
     ],
-    warning: "Thu + Sat are both Hyrox \u2014 consider spacing them out.",
+    warning: "Thu + Sat are both Hyrox — consider spacing them out.",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function CoachChat() {
                   {/* Warning */}
                   {msg.warning && (
                     <div className="flex items-start gap-1.5 text-[11px] text-amber-400/80 bg-amber-500/[0.08] rounded-lg px-2.5 py-1.5">
-                      <span className="shrink-0">{"\u26A0\uFE0F"}</span>
+                      <span className="shrink-0">{"⚠️"}</span>
                       {msg.warning}
                     </div>
                   )}

@@ -6,7 +6,7 @@ const steps = [
   {
     time: "7:00 AM",
     label: "Plan",
-    emoji: "\u2600\uFE0F",
+    emoji: "☀️",
     title: "AI sends your plan for today",
     description:
       "Wake up to a personalized brief on Telegram. Your Garmin is ready before your first coffee.",
@@ -31,7 +31,7 @@ const steps = [
     time: "5:00 PM",
     label: "Rebalance",
     emoji: "\uD83D\uDD04",
-    title: "Life happens \u2014 AI rebalances",
+    title: "Life happens — AI rebalances",
     description:
       "Missed a session? AI detects it, reschedules, and asks you to approve.",
   },
@@ -41,7 +41,7 @@ const steps = [
     emoji: "\uD83D\uDCCA",
     title: "Check your week at a glance",
     description:
-      "Completed sessions, upcoming workouts, weekly load \u2014 always up to date.",
+      "Completed sessions, upcoming workouts, weekly load — always up to date.",
   },
 ];
 
