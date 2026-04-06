@@ -20,14 +20,13 @@ export default function Hero() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-[#6C5CE7]/20 text-[#A29BFE] border border-[#6C5CE7]/30 mb-4">
-              Beta coming soon
+              Open Beta
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-              The fitness app that actually{" "}
+              Your workouts. Any source. Any device.{" "}
               <span className="bg-gradient-to-r from-[#6C5CE7] to-[#0984E3] bg-clip-text text-transparent">
-                understands
-              </span>{" "}
-              your training
+                Intelligently managed.
+              </span>
             </h1>
           </motion.div>
 
@@ -37,9 +36,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="text-lg sm:text-xl text-[#F5F5F7]/60 max-w-lg leading-relaxed"
           >
-            AI-powered coaching. Smart recovery. Personal records that matter.
-            Import workouts from anywhere — Instagram, YouTube, TikTok — and
-            push them to your Garmin or Apple Watch in seconds.
+            Import from YouTube, Instagram, or your coach. AI plans your week
+            and adapts when life changes. Push structured workouts to Garmin,
+            Apple Watch, and Amazfit.
           </motion.p>
 
           <motion.div

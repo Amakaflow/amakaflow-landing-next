@@ -1,0 +1,16 @@
+# CodeRabbit configuration — AmakaFlow Landing Page
+language: "en-US"
+
+reviews:
+  profile: "assertive"
+  auto_review:
+    enabled: true
+    drafts: false
+
+knowledge_base:
+  linear:
+    usage: enabled
+    team_keys:
+      - "AMA"
+  mcp:
+    usage: enabled
