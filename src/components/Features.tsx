@@ -12,60 +12,57 @@ const features = [
       </svg>
     ),
     title: "Import from Anywhere",
-    description: "Share from Instagram, YouTube, TikTok. Our AI extracts the workout structure automatically.",
+    description: "Paste a YouTube, Instagram, or TikTok link. AI extracts the workout structure and maps exercises automatically.",
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z" />
-        <circle cx="12" cy="9" r="2.5" />
+        <path d="M12 2L9.09 8.26 2 9.27l5 4.87L5.82 21 12 17.77 18.18 21 17 14.14l5-4.87-7.09-1.01L12 2z" />
+        <path d="M12 6v6l3 3" />
       </svg>
     ),
-    title: "AI Coaching",
-    description: "Get personalized workout suggestions based on your history, goals, and recovery.",
+    title: "AI Weekly Planning",
+    description: "Tell the AI your goals and it plans your week. Missed a session? It automatically rebalances around what matters.",
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+        <rect x="6" y="2" width="12" height="20" rx="4" />
+        <line x1="12" y1="18" x2="12" y2="18.01" />
+        <path d="M9 6h6" />
       </svg>
     ),
-    title: "Smart Recovery",
-    description: "RPE tracking, auto-deload, muscle freshness — train hard, recover smarter.",
-  },
-  {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FDCB6E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-      </svg>
-    ),
-    title: "Streaks & Badges",
-    description: "Weekly streaks, 18 milestone badges, XP levels. Stay motivated without the guilt.",
+    title: "Push to Any Device",
+    description: "Send structured workouts to Garmin, Apple Watch, or Amazfit. Follow along step-by-step on your wrist.",
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87" />
-        <path d="M16 3.13a4 4 0 010 7.75" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <polyline points="9 12 11 14 15 10" />
       </svg>
     ),
-    title: "Community",
-    description: "Activity feed, challenges, training crews. Your workout crew, in your pocket.",
+    title: "Smart Guardrails",
+    description: "Prevents overtraining with 5 hard rules. Checks muscle recovery, load limits, and race-week protection.",
   },
   {
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M18 8h1a4 4 0 010 8h-1" />
-        <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
-        <line x1="6" y1="1" x2="6" y2="4" />
-        <line x1="10" y1="1" x2="10" y2="4" />
-        <line x1="14" y1="1" x2="14" y2="4" />
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
       </svg>
     ),
-    title: "Nutrition Aware",
-    description: "Syncs with MyFitnessPal, Cronometer — or use our simple protein tracker.",
+    title: "Coach on Every Channel",
+    description: "Chat via web, mobile, or Telegram. Get advice, approve plan changes, and track progress from anywhere.",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#6C5CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
+        <path d="M13.73 21a2 2 0 01-3.46 0" />
+      </svg>
+    ),
+    title: "Proactive Reminders",
+    description: "Get notified when it's workout time. Missed a session? The AI proposes adjustments — approve with one tap.",
   },
 ];
 
@@ -93,13 +90,13 @@ export default function Features() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            Everything you need to{" "}
+            A training operations system —{" "}
             <span className="bg-gradient-to-r from-[#6C5CE7] to-[#0984E3] bg-clip-text text-transparent">
-              train smarter
+              not just another workout app
             </span>
           </h2>
           <p className="text-[#F5F5F7]/50 text-lg max-w-2xl mx-auto">
-            Built for people who take their training seriously.
+            Built for athletes who want their workouts to work across every device, every day.
           </p>
         </motion.div>
 
