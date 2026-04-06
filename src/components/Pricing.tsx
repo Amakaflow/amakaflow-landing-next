@@ -18,7 +18,6 @@ const plans = [
     cta: "Get Started Free",
     highlight: false,
     badge: "Free Forever",
-    comingSoon: false,
   },
   {
     name: "Pro",
@@ -39,7 +38,6 @@ const plans = [
     cta: "Start 30-Day Free Trial",
     highlight: true,
     badge: "Most Popular",
-    comingSoon: false,
   },
 ];
 
@@ -132,7 +130,7 @@ export default function Pricing() {
                       height="16"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke={plan.highlight ? "#6C5CE7" : "#6C5CE7"}
+                      stroke="#6C5CE7"
                       strokeOpacity={plan.highlight ? 1 : 0.5}
                       strokeWidth="2.5"
                       strokeLinecap="round"

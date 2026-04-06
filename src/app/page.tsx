@@ -21,7 +21,7 @@ export default function Home() {
         <CoachChat />
         <DeviceGrid />
         <Pricing />
-        <section className="py-24 sm:py-32">
+        <section id="signup" className="py-24 sm:py-32">
           <div className="max-w-md mx-auto px-4 text-center">
             <h2 className="text-2xl font-bold mb-6">
               Ready to simplify your training?
