@@ -5,6 +5,15 @@ import { useSearchParams } from "next/navigation";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "";
 
+// Best-effort Plausible event — no-op if script not loaded on the page.
+function trackConversion(referralSource: string | null) {
+  if (typeof window !== "undefined" && typeof (window as Window & { plausible?: (event: string, opts?: object) => void }).plausible === "function") {
+    (window as Window & { plausible?: (event: string, opts?: object) => void }).plausible!("WaitlistSignup", {
+      props: { referral_source: referralSource ?? "direct" },
+    });
+  }
+}
+
 function EmailCaptureInner() {
   const [email, setEmail] = useState("");
   const [goalEvent, setGoalEvent] = useState("");
@@ -15,8 +24,17 @@ function EmailCaptureInner() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!email || status === "loading") return;
+
+    if (!API_URL) {
+      setStatus("error");
+      setErrorMsg("Service configuration error. Please try again later.");
+      return;
+    }
+
     setStatus("loading");
     setErrorMsg("");
+
+    const referralSource = searchParams.get("r") || null;
 
     try {
       const res = await fetch(`${API_URL}/api/waitlist`, {
@@ -25,14 +43,16 @@ function EmailCaptureInner() {
         body: JSON.stringify({
           email,
           goal_event_text: goalEvent || null,
-          referral_source: searchParams.get("r") || null,
+          referral_source: referralSource,
         }),
       });
       if (!res.ok) throw new Error(await res.text());
+      trackConversion(referralSource);
       setStatus("success");
-    } catch {
+    } catch (err) {
+      const msg = err instanceof Error && err.message ? err.message : "";
       setStatus("error");
-      setErrorMsg("Something went wrong. Please try again.");
+      setErrorMsg(msg || "Something went wrong. Please try again.");
     }
   }
 
